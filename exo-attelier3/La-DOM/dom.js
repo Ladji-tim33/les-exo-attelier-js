@@ -73,7 +73,7 @@ const key = document.getElementById("key")
 
 const ring = () => {
     const audio = new Audio();
-    audio.src = "./agic.jpg.mp3";
+    audio.src = "./Magic.jpg.mp3";
     audio.play();
 }
 
