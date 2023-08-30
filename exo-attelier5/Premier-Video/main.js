@@ -681,10 +681,10 @@ function  testSize(numSize) {
         return "Large"
     } 
     else {
-        return "Cool"
+        return "yes"
     }
 
 } 
 
-testSize(20)
+testSize(7)
 
