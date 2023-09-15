@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.2.0/remixicon.css" integrity="sha512-eRbcr5kt0vg2Kgl5BBKIqXoZ0f1lpe4ImM8GyzJN7mrhUR57xPh2JX+5Ra8zlh5QZWxEVQW9MOfMaCEEjnMcMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>SPLI <br>TTRE</h1>
+    </header>
+
+    <main>
+        <section id="bill-input" class="bill-input">
+            <div class="bill-input_wrapper">
+                <div class="bill-input_input-group">
+                    <label for="bill" class="bill-input_label">Bill</label>
+                    <div class="bill-input_input">
+                        <div>
+                            <img src="image/icon-dollar.svg" alt="icon">
+                        </div>
+                        <input type="number" name="bill" id="bill" min="0" step="any" placeholder="0">
+                    </div>
+                </div>
+
+                <div class="bill-inputs_input-group">
+                    <label for="tip" class="bill-inputs_label">Select Tip %</label>
+                    <ul class="tip-grid">
+                        <li class="tip-grid_tip-chiox"><button value="5" type="button">5%</button></li>
+                        <li class="tip-grid_tip-chiox"><button value="10" type="button">10%</button></li>
+                        <li class="tip-grid_tip-chiox"><button value="15" type="button">15%</button></li>
+                        <li class="tip-grid_tip-chiox"><button value="25" type="button">25%</button></li>
+                        <li class="tip-grid_tip-chiox"><button value="50" type="button">5O%</button></li>
+                        <li class="tip-grid_tip-chiox"><input type="number" name="tip" id="tip" min="0" step="1" placeholder="custom"></li>
+                    </ul>
+                </div>
+
+                <div class="bill-input_input-group">
+                    <label for="peopole" id="peopoleLabel" class="bill-input_label"><span>Number od poeple</span></label>
+                    <div class="bill-input_input">
+                        <div>
+                            <img src="image/icon-person.svg" alt="icon">
+                           
+                        </div>
+                        <input type="number" min="0" step="1" id="poeple" name="peopole" placeholder="0">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="result" class="result">
+            <div class="result_wrapper">
+                <div class="result_tip-amount">
+                    <p>Tip Amount <br> <span>/ person</span></p>
+                    <h3>$0.00</h3>
+                </div>
+
+                <div class="result_total-bill">
+                    <p>Tip Amount <br> <span>/ person</span></p>
+                    <h3>$0.00</h3>
+                </div>
+
+                <button type="button">RESET</button>
+            </div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

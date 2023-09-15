@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+html{
+    --main-color : hsl (172, 67%, 45%);
+    --very-dark : hsl (183, 100%, 15%);
+    --dark-graylish : hsl (186, 14%, 43%);
+    --grayish-cyan : hsl (184, 67%, 56%);
+    --light-grayish : hsl (185, 41%, 84%);
+    --vary-light-grayish : hsl (189, 41%, 97%);
+}
+
+body{
+   font-family: 'Space Mono', monospace;
+   /* font-size: 24px; */
+   color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 84%);
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+    margin: 3rem 0;
+    opacity: 0.6;
+}
+
+h3{
+    color: hsl(172, 67%, 45%) ;
+    font-size: 2rem;
+    margin: 0;
+}
+
+main{
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    padding: 0;
+    width: 100%;
+    border: 0;
+    height: 2rem;
+    background-color: hsl(189, 41%, 97%);
+    text-align: end;
+    font-size: inherit;
+    color: hsl(183, 100%, 15%);
+    font-size: 1.4rem;
+}
+
+input:hover, button:hover{
+    cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[tbody=number]::-webkit-outer-spin-button{
+    appearance: none;
+    margin: 0;
+}
+
+.bill-input{
+    width: 47%;
+}
+
+.bill-input_input-group{
+    display: flex;
+    flex-direction: column;
+    margin:1rem 0;
+}
+
+.bill-input_label{
+    font: size 0.8;
+    color: hsl(184, 67%, 56%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.bill-input_label .error{
+    color: #ff967e;
+}
+
+.bill-input_input{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 0.2rem;
+}
+
+.bill-input_input div{
+    position: absolute;
+}
+
+.bill-input_input div{
+    position: relative;
+    left: 1rem;
+}
+
+.bill-input_input input{
+    padding-right: 1rem;
+}
+
+.bill-input_input input.error{
+    border: 2px solid #ff967e;
+    border-radius: 5px;
+}
+
+.tip-grid{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem 0 0 0;
+    padding: 0;
+    row-gap: 1rem;
+}
+
+.tip-grid_tip-chiox{
+    width: 30%;
+}
+
+.tip-grid_tip-chiox button, .tip-grid_tip-chiox input{
+    height: 2.5rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 0;
+    width: 100%;
+}
+
+.tip-grid_tip-chiox button{
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+}
+
+.tip-grid_tip-chiox button.active{
+    background-color: hsl(172, 67%, 45%);
+    color: 183, 100%, 15%;
+}
+
+.tip-grid_tip-chiox button:hover{
+    background-color: #9FE8DF;
+    color: 183, 100%, 15%;
+}
+
+.tip-grid_tip-chiox input{
+    text-align: center;
+}
+
+.result{
+    width: 47%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.result div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.result .result_tip-amount, .result .result_total-bill{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.result_tip-amount span, .result_total-bill span{
+    color: hsl(184, 67%, 56%);
+    font-size: 0.7rem;
+}
+
+.result button{
+    width: 80%;
+    padding: 0.6rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 5px;
+    background-color: hsl(172, 67%, 45%);
+}
+
+.result button:hover{
+    background-color: #9FE8DF;
+}
+
+@media screen and (max-width: 950px){
+    main{
+        flex-direction: column;
+    }
+
+    .bill-input, .result{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    main{
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    .bill-input_wrapper {
+        width: 80%;
+        padding: 2rem;
+    }
+
+    .tip-grid_tip-chiox{
+        width: 45%;
+    }
+
+    .result {
+        width: 80%;
+        margin: auto;
+    }
+}
+
