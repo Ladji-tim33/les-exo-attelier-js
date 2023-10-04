@@ -1,6 +1,6 @@
 
 const button = document.querySelector('.button')
-let btltbody = document.querySelector('.btltbody')
+const btltbody = document.querySelector('.btltbody')
 
 // recupere la localstorage
 btltbody.innerHTML = localStorage.getItem("stock");
@@ -15,7 +15,8 @@ for (let span of spanDels) {
     span.onclick = () => del(span.parentElement)
 
 };
-button.onclick = () => {
+
+form.onsubmit = () =>  {
     for (let i = 0; i < 5; i++) {
         for (let i = 0; i < 5; i++) {
             var row = document.createElement('tr')
@@ -45,7 +46,7 @@ button.onclick = () => {
                 row.appendChild(paranAction);
 
 
-                myButton1.onclick = () => modif(row);
+            
                 myButton1.textContent = "Modifier";
                 paranAction.appendChild(myButton1);
                 myButton1.style.background = "green"
@@ -56,6 +57,9 @@ button.onclick = () => {
                 myButton2.style.background = "red"
                 myButton2.style.marginLeft = "20px"
 
+                myButton1.addEventListener ('click', () => {
+                    prenom.value = paraPrnom.textContent
+                })
 
                 btltbody.appendChild(row);
                 prenom.value = "";
@@ -83,12 +87,9 @@ button.onclick = () => {
         localStorage.setItem("stock", btltbody.innerHTML)
     }
 
-    function modif(element2) {
-        element2.remove();
-
-        element2.prenom.innerHTML = paraPrnom;;
-
-    }
+   
 
 }
+
+
 

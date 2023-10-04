@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,39 +9,39 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-
 <body>
+    
     <h1 class="text-center">Jeemacoder gestion utilisateurs</h1>
     <form id="form">
         <div class="tous">
             <div class="one">
                 <div>
                     <label for="prenom">Prenom</label><br>
-                    <input type="text" id="prenom" name="prenom" required>
+                    <input type="text" id="prenom" name="prenom">
                 </div>
                 <div class="nom">
                     <label for="nom">Nom</label><br>
-                    <input type="text" id="nom" name="nom" required>
+                    <input type="text" id="nom" name="nom">
                 </div>
             </div>
             <div class="two">
                 <div>
                     <label for="email">Email</label><br>
-                    <input type="mail" id="email" name="email" required>
+                    <input type="mail" id="email" name="email">
                 </div>
                 <div class="numero">
                     <label for="numero">Téléphone</label><br>
-                    <input type="number" id="numero" name="numero" required>
+                    <input type="number" id="numero" name="numero" >
                 </div>
             </div>
-            <button class="button">Ajouter</button><button class="button2">Modifier</button>
+            <button class="button">Ajouter</button>
         </div>
     </form>
     <section class="py-5">
         <div class="container">
             <hr>
             <h2 class="text-center mt-5">utilisateurs</h2>
-             <table class="table table-striped">
+             <table class="table " id="myTable">
                 <thead>
                   <tr>
                     <th>Prenom</th>
@@ -58,9 +57,9 @@
               </table>
             
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
-    <script src="apps.js"></script>
+    <script src="main.js"></script>
 </body>
-
 </html>

@@ -49,48 +49,4 @@ label{
     background-color: green;
     border: none;
     border-radius: 5px;
-    /* display: none; */
 }
-
-.button2{
-    /* display: none; */
-    margin-top: 20px;
-    width: 100%;
-    padding: 10px;
-    color: white;
-    font-size: 22px;
-    background-color: green;
-    border: none;
-    border-radius: 5px;
-}
-
-
-thead tr {
-    border: none;
-    border-top: 1px solid rgb(207, 200, 200);
-    border-left: 1px solid rgb(207, 200, 200);
-    border-right: 1px solid rgb(207, 200, 200) ;
-}
-
-tbody tr td {
-   border: none; 
-   font-size: 20px;
-}
-
-ul{
-    list-style: none;
-}
-
-/* .div-global2:nth-child(even) {
-    background-color: #a91;
-    color: aquamarine;
-}
-.div-global2:nth-child(odd) {
-    background-color: #aaa;
-    color:black;
-} */
-
-h3{
-    font-weight: bold;
-}
-
