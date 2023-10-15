@@ -28,8 +28,7 @@ const [frontEnd1, backEnd1] = fullStack1
 
 console.log(frontEnd1)
 console.log(backEnd1)
-["HTML", "CSS", "JS", "React"]
-["Node", "Express", "MongoDB"]
+
 
 
 
@@ -186,7 +185,7 @@ const getPersonInfo1 = obj => {
     return personInfo
 }
 
-console.log(getPersonInfo(person))
+console.log(getPersonInfo1(person))
 
 
 // Paramètre d'objet avec déstructuration
