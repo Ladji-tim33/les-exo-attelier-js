@@ -67,10 +67,10 @@ console.log(rest)
 
 
 // Déstructuration lors de l'itération
-const countries1 = [['Finland', 'Helsinki' , 16], ['Sweden', 'Stockholm', 25], ['Norway', 'Oslo', 55]]
+const countries1 = [['Finland', 'Helsinki'], ['Sweden', 'Stockholm'], ['Norway', 'Oslo']]
 
-for (const [country, city,  age] of countries1) {
-    console.log(country,  city,  age)
+for (const [country, city] of countries1) {
+    console.log(country, city)
 }
 
 
@@ -91,9 +91,9 @@ déstructurer doit être exactement le même
 que la clé ou la propriété de l'objet. Voir l'exemple ci - dessous.*/
 
 const rectangle1 = {
-    width1: 20,
-    height1: 10,
-    area1: 200
+    width: 20,
+    height: 10,
+    area: 200
 }
 let { width1, height1, area1, perimeter1 } = rectangle1
 
@@ -103,11 +103,11 @@ console.log(width1, height1, area1, perimeter1)
 
 // Renommer lors de la structuration
 const rectangle2 = {
-    width2: 20,
-    height2: 10,
-    area2: 200
+    width: 20,
+    height: 10,
+    area: 200
 }
-let { width2: w, height2: h, area2: a, perimeter: p } = rectangle2
+let { width: w, height: h, area: a, perimeter: p } = rectangle2
 
 console.log(w, h, a, p)
 
@@ -117,13 +117,13 @@ console.log(w, h, a, p)
 dans ce cas nous pouvons donner une valeur par défaut lors de la déclaration. Voir l'exemple.*/
 
 const rectangle3 = {
-    width3: 20,
-    height3: 10,
-    area3: 200
+    width: 20,
+    height: 10,
+    area: 200
 }
-let { width3, height3, area3, perimeter3 = 60 } = rectangle3
+let { width2, height2, area2, perimeter2 = 60 } = rectangle3
 
-console.log(width3, height3, area3, perimeter3) 
+console.log(width2, height2, area2, perimeter2) 
 
 //Let us modify the object:width to 30 and perimeter to 80
 const rectangle4 = {
@@ -132,25 +132,25 @@ const rectangle4 = {
     area: 200,
     perimeter: 80
 }
-let { width, height, area, perimeter = 60 } = rectangle4
-console.log(width, height, area, perimeter) //30 10 200 80
+let { width3, height3, area3, perimeter3 = 60 } = rectangle4
+console.log(width3, height3, area3, perimeter3) //30 10 200 80
 
 
 /*Clés de déstructuration en tant que paramètres de fonction.Créons une fonction qui prend un objet rectangle et renvoie le périmètre d'un rectangle.*/
 
 // Paramètre d'objet sans déstructuration
-
+// Without destructuring
 const rect = {
     width: 20,
-    height: 20
+    height: 10
 }
 const calculatePerimeter1 = rectangle => {
     return 2 * (rectangle.width + rectangle.height)
 }
 
 console.log(calculatePerimeter1(rect)) // 60
-
-
+//with destructuring
+//Another Example
 const person = {
     firstName: 'Asabeneh',
     lastName: 'Yetayeh',
@@ -194,8 +194,6 @@ const calculatePerimeter2 = ({ width, height }) => {
 }
 
 console.log(calculatePerimeter2(rect)) // 60
-
-
 // Let us create a function which give information about the person object with destructuring
 const getPersonInfo2 = ({
     firstName,
@@ -326,13 +324,10 @@ console.log(copiedUser2)
 de propagation. Si nous utilisons un opérateur spread comme paramètre, l'argument passé lorsque nous invoquons une fonction se 
 transformera en tableau.*/
 
-
 const sumAllNums1 = (...args) => {
     console.log(args)
 }
-  
-sumAllNums1(1, 2, 3, 4, 5)
-  
+
 
 const sumAllNums2 = (...args) => {
     let sum = 0
