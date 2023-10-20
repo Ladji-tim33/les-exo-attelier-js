@@ -52,9 +52,6 @@ button.addEventListener ('click', function(e) {
 
    function del(element) {
     element.remove();
-    
-
-  
 }
 
 console.log(del);
